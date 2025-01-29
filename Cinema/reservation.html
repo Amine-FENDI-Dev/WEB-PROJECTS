@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Flashback cinema - Réserver votre séance</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logo_onglet.png">
+</head>
+
+<body>
+    <header class="barre_nav">
+        <div class="logo"> <a href="Accueil.html"></a></div>
+        <div class="barre_recherche"></div>
+        <div class="nav"> <a href="seances_disponibles.html">Séances</a></div>
+        <div class="nav"> <a href="reservation.html">Réservations</a></div>
+        <div class="nav"> <a href="offres.html">Offres</a></div>
+        <div class="nav"> <a href="contact.html">Contact</a></div>
+    </header>
+    <div id="background-banner"></div>
+    <div class="container">
+        <div class="reservation">
+            <h1>Réservez votre séance</h1>
+            <form action="reservation.php" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required>
+                <label for="film">Film :</label>
+                <select name="film" id="film" required onchange="updateBackground()">
+                    <!-- Sélectionnez un film sur la page pour avoir l'image du film en fond ;) -->
+                    <option value="default">-- Sélectionnez un film --</option>
+                    <option value="film1">1. L'Amour Ouf</option>
+                    <option value="film2">2. Call Me By Your Name</option>
+                    <option value="film3">3. La Cité De La Peur</option>
+                    <option value="film4">4 Fight Club</option>
+                    <option value="film5">5. Forrest Gump</option>
+                    <option value="film6">6. Interstellar</option>
+                    <option value="film7">7. Le Parrain</option>
+                    <option value="film8">8. La Haine</option>
+                    <option value="film9">9. La Ligne Verte</option>
+                    <option value="film10">10. Pulp Fiction</option>
+                    <option value="film11">11. Batman - The Dark Knight</option>
+                    <option value="film12">12. Princesse Mononoke</option>
+                    <option value="film13">13. Se7en</option>
+                    <option value="film14">14. La La Land</option>
+                    <option value="film15">15. Le Grand Bleu</option>
+                </select>
+                <label for="date">Date :</label>
+                <input type="date" id="date" name="date" required>
+                <label for="heure">Heure :</label>
+                <input type="time" id="heure" name="heure" required>
+                <label for="film">Salle :</label>
+                <select name="salle" id="salle">
+                    <option value="">-- Choisissez votre salle --</option>
+                    <option value="salle1">Salle 1 (50 places)</option>
+                    <option value="salle2">Salle 2 (40 places)</option>
+                    <option value="salle3">Salle 3 (20 places)</option>
+                    <option value="salle4">Salle 4 (20 places)</option>
+                    <option value="salle5">Salle 5 (15 places)</option>
+                    <option value="salle6">Salle 6 (10 places)</option>
+                    <option value="salle7">Salle 7 (10 places)</option>
+                    <option value="salle8">Salle 8 (10 places)</option>
+                </select>
+                <input type="submit" value="Réserver">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function updateBackground() {
+        const filmSelect = document.getElementById('film');
+        const selectedFilm = filmSelect.value;
+        const backgroundBanner = document.getElementById('background-banner');
+
+        backgroundBanner.className = ''; // Reset class
+
+        if (selectedFilm) {
+            backgroundBanner.classList.add(`${selectedFilm}-banner`);
+        }
+    }
+</script>

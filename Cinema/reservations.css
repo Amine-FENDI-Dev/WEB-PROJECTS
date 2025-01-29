@@ -1,0 +1,274 @@
+div {
+    font-family: ubuntu;
+}
+
+header {
+    position: fixed;
+}
+
+a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 220px;
+    height: 50px;
+    background-image: url("logo_cinema.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.barre_recherche {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: rgba(245, 198, 28, 0.774);
+}
+
+.nav:hover {
+    background-color: #212121;
+    transition: background-color 0.3s ease;
+}
+
+.barre_nav {
+    width: 100%;
+    border-bottom: 3px solid grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: black;
+    min-height: 50px;
+    z-index: 3;
+
+}
+
+.container {
+    padding: 20px;
+    color: white;
+}
+
+.reservation {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: rgba(245, 198, 28, 0.774);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+}
+
+
+input[type="submit"] {
+    background-color: rgba(245, 198, 28, 0.774);
+    color: black;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(245, 198, 28, 0.9);
+}
+
+.container {
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.reservation {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40%;
+}
+
+h1 {
+    color: rgba(245, 198, 28, 0.774);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    padding-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(245, 198, 28, 0.774);
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+/* input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+} */
+
+input::placeholder,
+select::placeholder {
+    color: rgba(245, 198, 28, 0.774);
+}
+
+input[type="submit"] {
+    background-color: rgba(245, 198, 28, 0.774);
+    color: black;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(245, 198, 28, 0.9);
+}
+
+#background-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.default-banner {
+    background-image: url('cinema_background_réservations.jpg');
+}
+
+.film1-banner {
+    background-image: url('images_accueil/amour_ouf.jpg');
+}
+
+.film2-banner {
+    background-image: url('images_accueil/call_me_by_your_name.jpg');
+}
+
+.film3-banner {
+    background-image: url('images_accueil/cite_de_la_peur.jpg');
+}
+
+.film4-banner {
+    background-image: url('images_accueil/fight_club.jpg');
+}
+
+.film5-banner {
+    background-image: url('images_accueil/forrest_gump.jpg');
+}
+
+.film6-banner {
+    background-image: url('images_accueil/interstellar.jpg');
+}
+
+.film7-banner {
+    background-image: url('images_accueil/le_parrain.jpg');
+}
+
+.film8-banner {
+    background-image: url('images_accueil/la_haine.jpg');
+}
+
+.film9-banner {
+    background-image: url('images_accueil/la_ligne_verte.jpg');
+}
+
+.film10-banner {
+    background-image: url('images_accueil/pulp_fiction.jpg');
+}
+
+.film11-banner {
+    background-image: url('images_accueil/the_dark_knight.jpg');
+}
+
+.film12-banner {
+    background-image: url('images_accueil/princesse_mononoke.jpg');
+}
+
+.film13-banner {
+    background-image: url('images_accueil/seven.jpg');
+}
+
+.film14-banner {
+    background-image: url('images_accueil/la_la_land.jpg');
+}
+
+.film15-banner {
+    background-image: url('images_accueil/grand_bleu.jpg');
+}
+
+
+
+@media (max-width:720px) {
+
+    .barre_nav {
+        flex-direction: column;
+    }
+
+    .nav {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .logo {
+        width: 88px;
+        height: 20px;
+        background-image: url("logo_cinema.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .barre_recherche {
+        display: none;
+    }
+
+    div {
+        font-size: 12px;
+    }
+}

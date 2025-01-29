@@ -1,0 +1,591 @@
+div {
+    font-family: ubuntu;
+}
+
+header {
+    position: fixed;
+}
+
+a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+span {
+    font-size: 35px;
+    font-weight: bold
+}
+
+.logo {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 220px;
+    height: 50px;
+    background-image: url("logo_cinema.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.barre_recherche {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: rgba(245, 198, 28, 0.774);
+}
+
+.nav:hover {
+    background-color: #212121;
+    transition: background-color 0.3s ease;
+}
+
+.barre_nav {
+    width: 100%;
+    border-bottom: 3px solid grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: black;
+    min-height: 50px;
+    z-index: 1;
+
+}
+
+.film {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    padding: 40px;
+    width: 43%;
+    text-align: justify;
+    color: #BBBBBB;
+}
+
+.film1 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    padding: 40px;
+    width: 50%;
+    text-align: justify;
+    color: #BBBBBB;
+}
+
+.langues {
+    color: rgb(76, 76, 216);
+    display: flex;
+    justify-content: left;
+}
+
+.bloc {
+    text-align: center;
+    width: 100px;
+    border-color: rgb(76, 76, 216);
+    border-width: 3px;
+    border-style: solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.titre_film {
+    display: inline;
+}
+
+/* Film à l'affiche 1 */
+.affiche1 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/amour_ouf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche1:hover {
+    background-image: url("images_accueil/amour_ouf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+/* Film à l'affiche 2 */
+.affiche2 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/call_me_by_your_name.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche2:hover {
+    background-image: url("images_accueil/call_me_by_your_name.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+/* Film à l'affiche 3 */
+.affiche3 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/cite_de_la_peur.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche3:hover {
+    background-image: url("images_accueil/cite_de_la_peur.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+/* Film à l'affiche 4 */
+.affiche4 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/fight_club.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche4:hover {
+    background-image: url("images_accueil/fight_club.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 5 */
+.affiche5 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/forrest_gump.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche5:hover {
+    background-image: url("images_accueil/forrest_gump.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 6 */
+.affiche6 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/interstellar.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche6:hover {
+    background-image: url("images_accueil/interstellar.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 7 */
+.affiche7 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/le_parrain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche7:hover {
+    background-image: url("images_accueil/le_parrain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 8 */
+.affiche8 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/la_haine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche8:hover {
+    background-image: url("images_accueil/la_haine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 9 */
+.affiche9 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/la_ligne_verte.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche9:hover {
+    background-image: url("images_accueil/la_ligne_verte.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 10 */
+.affiche10 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/pulp_fiction.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche10:hover {
+    background-image: url("images_accueil/pulp_fiction.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+/* Film à l'affiche 11 */
+.affiche11 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/the_dark_knight.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche11:hover {
+    background-image: url("images_accueil/the_dark_knight.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 12 */
+.affiche12 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/princesse_mononoke.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche12:hover {
+    background-image: url("images_accueil/princesse_mononoke.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 13 */
+.affiche13 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/seven.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche13:hover {
+    background-image: url("images_accueil/seven.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 14 */
+.affiche14 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/la_la_land.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche14:hover {
+    background-image: url("images_accueil/la_la_land.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+
+/* Film à l'affiche 15 */
+.affiche15 {
+    width: 100%;
+    height: 655px;
+    background-image: url("images_accueil/grand_bleu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1.5s ease;
+}
+
+.affiche15:hover {
+    background-image: url("images_accueil/grand_bleu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fond noir semi-transparent */
+    background-blend-mode: overlay;
+    /* Mélange le fond avec l'image */
+    position: relative;
+    overflow: hidden;
+    transform: translateX(30px);
+}
+
+@media (max-width:720px) {
+
+    .barre_nav {
+        flex-direction: column;
+    }
+
+    .nav {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .logo {
+        width: 88px;
+        height: 20px;
+        background-image: url("logo_cinema.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .barre_recherche {
+        display: none;
+    }
+
+    div {
+        font-size: 12px;
+    }
+
+    #amour_ouf {
+        padding-top: 200px;
+    }
+}
